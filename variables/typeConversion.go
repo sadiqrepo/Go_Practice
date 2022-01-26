@@ -18,4 +18,9 @@ func main() {
 	k = strconv.Itoa(i)
 	fmt.Printf("%v, %T\n", k, k)
 
+
+	var a int = 10
+	var b int8 = 3
+	fmt.Println(a + int(b))
+
 }
