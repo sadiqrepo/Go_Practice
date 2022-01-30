@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+
 func simpleMap(){
 
     goMaps := map[string]int{"Apples" : 5, "Oranges" : 10, "Kiwis" : 20, "Rasberries" : 25}
@@ -24,8 +25,66 @@ func mapUsingMake() map[string]int{
 		employeeList["Sudarshan"] = 13
 		employeeList["Sadiq"] = 11
 
+		fmt.Println(employeeList["Sudarshan"])
+
 	return employeeList
 	
+}
+
+var (
+	groceryList map[string]int = map[string]int{"Apples":10, "Oranges": 20, "SweetLime":30}
+)
+
+func addElements(){
+	
+	groceryList["JackFruit"] = 40
+	groceryList["Banana"] = 50
+	fmt.Println(groceryList)
+
+}
+
+func updateElements(){
+	
+	groceryList["JackFruit"] = 60
+	groceryList["Banana"] = 70
+	fmt.Println(groceryList)
+	
+}
+
+
+func deleteElements(){
+
+	delete(groceryList, "Banana")
+	fmt.Println(groceryList)
+
+}
+
+func iterateMap(){
+
+	for key, value := range groceryList{
+		fmt.Println("Key: ",key, "=> Value: ",value)
+	}
+}
+
+func truncateMap(){
+
+	goMaps1 := map[string]int{"Apples" : 5, "Oranges" : 10, "Kiwis" : 20, "Rasberries" : 25}
+	goMaps2 := map[string]int{"Apples" : 5, "Oranges" : 10, "Kiwis" : 20, "Rasberries" : 25}
+
+	fmt.Println("Before Truncation")
+	fmt.Println(goMaps1)
+	fmt.Println(goMaps2)
+
+	for k := range goMaps1{
+		delete(goMaps1, k)
+	}
+
+	goMaps2 = make(map[string]int)
+
+	fmt.Println("After Truncation")
+	fmt.Println(goMaps1)
+	fmt.Println(goMaps2)
+
 }
 
 
@@ -34,4 +93,11 @@ func main(){
 	findMapType()
 	fmt.Println(mapUsingMake())
 	fmt.Println("Length of map: ",len(mapUsingMake()))
+	addElements()
+	updateElements()
+	iterateMap()
+	deleteElements()
+	truncateMap()
+
+	
 }
