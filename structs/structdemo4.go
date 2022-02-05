@@ -5,22 +5,20 @@ import (
 	"fmt"
 )
 
-type Employee struct{
+type Employee struct {
 	FirstName string `json:"firstname"`
-	LastName string `json:"lastname"`
-	City string `json:"city"`
+	LastName  string `json:"lastname"`
+	City      string `json:"city"`
 }
 
+func main() {
 
-func main(){
-
-	json_string :=`
+	json_string := `
 	{
 		"firstname" : "Daniel",
 		"lastname"	: "Cormier",
 		"city"		: "Bangalore"
 	}`
-
 
 	emp1 := new(Employee)
 	emp1.FirstName = "Tony"
@@ -30,5 +28,6 @@ func main(){
 	fmt.Printf("%s\n", jsonStr)
 
 	emp2 := new(Employee)
-	json.Unmarshal([]byte(json_string))
+	json.Unmarshal([]byte(json_string), emp2)
+	fmt.Println(emp2)
 }

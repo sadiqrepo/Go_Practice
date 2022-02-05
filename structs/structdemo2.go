@@ -1,22 +1,21 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
 type rectangle struct {
-
-	length int
+	length  int
 	breadth int
-	color string
+	color   string
 
 	geometry struct {
-		area int
+		area      int
 		perimeter int
 	}
 }
 
-func main(){
+func main() {
 
 	var rect rectangle
 	rect.length = 10

@@ -1,15 +1,16 @@
 package main
 
-import ( "fmt")
+import (
+	"fmt"
+)
 
-
-type rectangle struct{
-	length float64
+type rectangle struct {
+	length  float64
 	breadth float64
-	color string
+	color   string
 }
 
-func main(){
+func main() {
 	var rect1 = rectangle{10.5, 25.10, "red"}
 	fmt.Println(rect1)
 
@@ -34,13 +35,11 @@ func main(){
 	rect7.color = "white"
 	fmt.Println(rect7)
 
-
 	var rect8 = new(rectangle)
 	rect8.length = 20
 	rect8.breadth = 40
 	rect8.color = "black"
 	fmt.Println(rect8)
-
 
 	var rect9 = &rectangle{10, 20, "Pink"}
 	fmt.Println(rect9)
@@ -54,6 +53,5 @@ func main(){
 	(*rect11).breadth = 20
 	(*rect11).color = "Magenta"
 	fmt.Println(rect11)
-
 
 }
