@@ -19,4 +19,7 @@ func main(){
 	s = s[2:]
 	printSlice(s)
 
+	s = s[2:]
+	printSlice(s)
+
 }
