@@ -21,4 +21,9 @@ func main(){
 
 	d := c[2:5]
 	printSlice("d", d)
+
+	e := d[2:]
+	printSlice("e", e)
+
+	
 }
