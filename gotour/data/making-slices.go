@@ -24,6 +24,5 @@ func main(){
 
 	e := d[2:]
 	printSlice("e", e)
-
 	
 }
