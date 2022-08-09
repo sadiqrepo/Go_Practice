@@ -4,14 +4,19 @@ import (
 	"fmt"
 )
 
-func main(
+
+
+func main(){
 
 	var (
-		lang string
+		lang    string
 		version int
 	)
 
 	lang, version = "go", 2
 
 	fmt.Println(lang, "version", version)
-)
+
+}
+
+	
