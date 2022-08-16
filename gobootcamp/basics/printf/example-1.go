@@ -10,4 +10,7 @@ func main(){
 
 	fmt.Printf("%q\n", name)
 	fmt.Printf("%s\n", name)
+
+	fmt.Println("Hi\nHi")
+	fmt.Println("Hi\\n\"Hi\"")
 }
