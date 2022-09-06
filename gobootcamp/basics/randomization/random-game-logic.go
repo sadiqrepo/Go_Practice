@@ -48,8 +48,11 @@ func main(){
 
 		n := rand.Intn(guess + 1)
 
-		if n == guess {
-			fmt.Println("YOU Won!!")
+		if turn == 0 && n == guess {
+			fmt.Println("Congratulations!!You are a first turn winner!!")
+			return
+		}else if n == guess {
+			fmt.Println("Congratulations!!You won!!")
 			return
 		}
 
